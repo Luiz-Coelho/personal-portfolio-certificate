@@ -1,0 +1,263 @@
+/* Variables */
+:root {
+  --green-1: hsl(88, 38%, 15%);
+  --green-1-darker: hsl(88, 38%, 5%);
+  --green-2: hsl(74, 32%, 32%);
+  --brown-1: hsl(32, 65%, 62%);
+  --brown-2: hsl(28, 67%, 44%);
+  --neutral-color: hsl(52, 94%, 94%);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  color: var(--neutral-color);
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+#navbar {
+  padding: 1rem;
+  background-color: var(--neutral-color);
+  color: var(--brown-2);
+  font-size: clamp(1rem, 4vw, 1.25rem);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 510px) {
+  #navbar {
+    font-size: 0.75rem;
+  }
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2rem;
+  list-style: none;
+}
+
+#welcome-section {
+  height: 100vh;
+  background: radial-gradient(circle, var(--green-1), var(--green-1-darker));
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+#welcome-section p {
+  text-align: center;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+#welcome-section p {
+  color: var(--brown-1);
+}
+
+#projects {
+  padding: 1rem;
+  background-color: var(--green-2);
+}
+
+#projects h2 {
+  padding: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project-tile {
+  background-color: var(--green-1);
+  border-radius: 0.3rem;
+}
+
+.project-tile h3,
+p {
+  padding: 1rem;
+}
+
+footer {
+  padding: 1rem;
+  background-color: var(--neutral-color);
+  color: var(--brown-2);
+}
+
+#about-me {
+  padding: 1rem;
+}
+
+#about-me p {
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+#about-me ul {
+  margin-top: 2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+@media (max-width: 600px) {
+  #about-me ul {
+    flex-direction: column;
+  }
+}
+
+#about-me li:hover {
+  transition: 0.5s;
+  transform: translateY(0.5rem);
+}
+
+hr {
+  border: 2px solid var(--brown-2);
+  margin-block: 2rem;
+}
+
+#lower-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 580px) {
+  #lower-div {
+    flex-direction: column;
+  }
+}
+
+#contact-me {
+  padding: 1rem;
+}
+
+#contact-me ul {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media (max-width: 580px) {
+  #contact-me ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#contact-me li:hover {
+  transition: 0.5s;
+  transform: translateY(0.5rem);
+}
